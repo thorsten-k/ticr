@@ -13,7 +13,7 @@
     
 	<dependencies>
 		<dependency>
-			<groupId>de.kisner</groupId>
+			<groupId>de.kisner.ticr</groupId>
 			<artifactId>ticr-entities</artifactId>
 		</dependency>
 	
