@@ -10,15 +10,21 @@ import org.slf4j.LoggerFactory;
 
 import de.kisner.ticr.model.TicrNsPrefixMapper;
 
-public class AbstractTicrXmlTest extends AbstractAhtUtilsXmlTest
+public class AbstractTicrXmlTest<T extends Object> extends AbstractAhtUtilsXmlTest<T>
 {
 	final static Logger logger = LoggerFactory.getLogger(AbstractTicrXmlTest.class);
 
+	public AbstractTicrXmlTest(){this(null,null);}
+	public AbstractTicrXmlTest(Class<T> cXml,String xmlDirSuffix)
+	{
+		super(cXml,xmlDirSuffix);
+	}
+	
 	@BeforeClass
     public static void initLogger()
 	{
 		LoggerInit loggerInit = new LoggerInit("log4junit.xml");	
-		loggerInit.addAltPath("config.ticr-xml.test");
+		loggerInit.addAltPath("ticr-entites.test/config");
 		loggerInit.init();
     }
 	
