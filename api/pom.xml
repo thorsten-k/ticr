@@ -28,6 +28,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.tumblr</groupId>
+		    <artifactId>jumblr</artifactId>
+		   <scope>provided</scope>
+		</dependency>
 	</dependencies>
 	
 </project>
