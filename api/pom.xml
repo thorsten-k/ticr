@@ -1,0 +1,33 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>de.kisner.ticr</groupId>
+		<artifactId>ticr</artifactId>
+		<version>0.1.1</version>
+	</parent>
+
+	<artifactId>ticr-api</artifactId>
+	<name>TICR - API</name>
+  	<packaging>jar</packaging>
+    
+	<dependencies>
+		<dependency>
+			<groupId>de.kisner</groupId>
+			<artifactId>ticr-entities</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.jboss.resteasy</groupId>
+			<artifactId>resteasy-jaxrs</artifactId>
+			<scope>provided</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+	
+</project>
