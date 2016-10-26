@@ -34,13 +34,13 @@
 				<groupId>de.kisner.ticr</groupId>
 				<artifactId>ticr-api</artifactId>
 				<version>${project.version}</version>
-            <type>jar</type>
+            	<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>de.kisner.ticr</groupId>
 				<artifactId>ticr-entities</artifactId>
 				<version>${project.version}</version>
-            <type>jar</type>
+            	<type>jar</type>
 			</dependency>
 			<dependency>
 				<groupId>de.kisner.ticr</groupId>
