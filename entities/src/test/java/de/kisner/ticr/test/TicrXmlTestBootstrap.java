@@ -15,7 +15,7 @@ public class TicrXmlTestBootstrap
 	public static void init()
 	{
 		LoggerInit loggerInit = new LoggerInit("log4j.xml");	
-		loggerInit.addAltPath("config.ticr-xml.test");
+		loggerInit.addAltPath("ticr-entities.test/config");
 		loggerInit.init();
 		JaxbUtil.setNsPrefixMapper(new TicrNsPrefixMapper());
 	}

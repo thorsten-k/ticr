@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ticr:blogs xmlns:ticr="http://ticr.kisner.de">
+    <ticr:blog code="myCode" name="myName"/>
+    <ticr:blog code="myCode" name="myName"/>
+</ticr:blogs>
