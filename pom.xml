@@ -46,7 +46,7 @@
 				<groupId>de.kisner.ticr</groupId>
 				<artifactId>ticr-util</artifactId>
 				<version>${project.version}</version>
-            <type>jar</type>
+            	<type>jar</type>
 			</dependency>
     	
 			<!-- Managed Dependencies -->
