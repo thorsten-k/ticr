@@ -10,8 +10,8 @@
 	<modules>
   	<module>api</module>
 <!--		<module>client</module>
-		<module>gae</module>
-		<module>util</module>  -->	
+		<module>gae</module> -->
+		<module>util</module>  
 		<module>entities</module>
 	</modules>
 	
