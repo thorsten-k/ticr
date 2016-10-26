@@ -131,13 +131,52 @@
 	</build>
 	
 	
-    <profiles>
+	<profiles>
     	<profile>
-       		<id>ram</id>
-       		<build>
-       			<directory>${my.build.directory}</directory>
-       		</build>
-   		</profile>
+     		<id>ram</id>
+     		<build>
+     			<directory>${my.build.directory}</directory>
+     		</build>
+   	</profile>
+		<profile>
+			<id>only-eclipse</id>
+			<activation><property><name>m2e.version</name></property></activation>
+			<build>
+				<pluginManagement>
+		      	<plugins>
+						<plugin>
+				        	<groupId>org.eclipse.m2e</groupId>
+				        	<artifactId>lifecycle-mapping</artifactId>
+				        	<version>1.0.0</version>
+				        	<configuration>
+								<lifecycleMappingMetadata>
+				            	<pluginExecutions>
+				              		<pluginExecution>
+				                		<pluginExecutionFilter>
+						                  <groupId>org.apache.maven.plugins</groupId>
+						                  <artifactId>maven-enforcer-plugin</artifactId>
+						                  <versionRange>[1.0.0,)</versionRange>
+						                  <goals><goal>enforce</goal></goals>
+				                		</pluginExecutionFilter>
+				                		<action><ignore /></action>
+				              		</pluginExecution>
+				              		<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.jeesl</groupId>
+												<artifactId>jeesl-maven</artifactId>
+												<versionRange>[0.2.6-SNAPSHOT,)</versionRange>
+												<goals><goal>createSeamSecurity</goal><goal>msgBundle</goal></goals>
+											</pluginExecutionFilter>
+											<action><ignore></ignore></action>
+										</pluginExecution>
+				            	</pluginExecutions>
+			          		</lifecycleMappingMetadata>
+			        		</configuration>
+						</plugin>         	
+					</plugins>
+				</pluginManagement>
+		  </build>
+		</profile>
 	</profiles>
     
 </project>
